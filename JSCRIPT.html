@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Welcome to JavaScript</title>
+</head>
+<body onload="myFunction4()">
+
+<h3>onChange</h3>
+<p>Select a fruit from the list.</p>
+<select id="mySelect" onchange="myFunction()">
+<option value=" "></option>
+<option value="Apple">Apple</option>
+<option value="Banana">Banana</option>
+<option value="Mango">mango</option>
+<option value="orange">orange</option>
+</select>
+<p id="demo"></p>
+
+<h3>onClick</h3>
+<p>Click the button to release onClick Event.</p>
+<button onclick="myFunction2()">Click me</button> 
+<p id="demo2"></p>
+
+<h3>onMouseOver/onMouseOut</h3>
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="BG Image.PNG" alt="no image found" width="75" height="75">
+<p id="demo3"></p>
+
+<h3>onKeyDown</h3>
+<p>Press any key inside the textbox.</p>
+<input type="text" onkeydown="myFunction3()">
+<h3>onLoad</h3>
+<p>Message will print when you refresh the page.</p>
+<script>
+function myFunction() {
+var x = document.getElementById("mySelect").value;
+document.getElementById("demo").innerHTML = "You selected: " + x;
+}
+function myFunction2() {
+document.getElementById("demo2").innerHTML = "onClick Event released.";
+}
+function bigImg(x) {
+x.style.height = "100px";
+x.style.width = "100px";
+x.style.border = "2px solid green";
+document.getElementById("demo3").innerHTML="onMouseOver";
+}
+function normalImg(x) {
+x.style.height = "75px";
+x.style.width = "75px";
+document.getElementById("demo3").innerHTML="onMouseOut";
+}
+function myFunction3() {
+alert("You pressed a key inside the input field");
+}
+function myFunction4()
+{ alert("Page is loaded");
+}
+</script>
+</body>
+</html>
